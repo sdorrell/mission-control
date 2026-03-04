@@ -10,10 +10,20 @@ const chart = new Chart(cpuCanvas, {
   labels: [],
   datasets: [{
    label: "CPU %",
-   data: cpuData
+   data: cpuData,
+   borderColor: "#00e5ff",
+   tension: 0.2
   }]
  },
- options: { animation: false }
+ options: {
+  animation: false,
+  scales: {
+   y: {
+    min: 0,
+    max: 100
+   }
+  }
+ }
 })
 
 socket.on("telemetry", data => {
@@ -32,22 +42,3 @@ socket.on("telemetry", data => {
  chart.update()
 
 })
-
-async function load() {
-
- const projects = await fetch("/api/projects").then(r => r.json())
- const events = await fetch("/api/events").then(r => r.json())
-
-document.getElementById("projects").innerHTML =
-  projects.map(p =>
-   `<div><strong>${p.name}</strong><br>Status: ${p.status}<br>Progress: ${p.progress}%</div>`
-  ).join("")
-
-document.getElementById("events").innerHTML =
-  events.map(e =>
-   `<div>${e.message}</div>`
-  ).join("")
-}
-
-load()
-setInterval(load, 5000)
