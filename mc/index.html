@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Mission Control</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<h1>🚀 Mission Control</h1>
+
+<div class="grid">
+
+<div class="panel">
+<h2>CPU</h2>
+<canvas id="cpuChart"></canvas>
+</div>
+
+<div class="panel">
+<h2>Memory</h2>
+<div id="memory"></div>
+</div>
+
+<div class="panel">
+<h2>Projects Radar</h2>
+<div id="projects"></div>
+</div>
+
+<div class="panel">
+<h2>Events</h2>
+<div id="events"></div>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

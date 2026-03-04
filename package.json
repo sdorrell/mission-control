@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "mission-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "chart.js": "^4.5.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "octokit": "^5.0.5",
+    "pg": "^8.19.0",
+    "socket.io": "^4.8.3",
+    "systeminformation": "^5.31.2"
+  }
+}

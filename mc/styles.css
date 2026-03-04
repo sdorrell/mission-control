@@ -1,0 +1,32 @@
+
+body{
+ background:#0b0f19;
+ color:#65f4ff;
+ font-family:monospace;
+ padding:20px;
+}
+
+h1{
+ text-align:center;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+
+.panel{
+ background:#111827;
+ padding:20px;
+ border-radius:10px;
+}
+
+button{
+ padding:10px;
+ background:#1f2937;
+ color:white;
+ border:none;
+ cursor:pointer;
+}
+
